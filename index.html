@@ -9,18 +9,17 @@
 
   <body>
 
-    <div id="header">
-      <title>Free Ski</title>
-      <div id="navBar" >
-        <!-- buttons go here -->
-      </div>
-      <div id="lives" >
-        <!-- details on number of lives go here -->
-      </div>
-    </div>
-
-    <div id="gameBoard" >
+    <div id="gameBoard">
       <canvas id="canvas" width="800" height="900"></canvas>
+      <div class="navBar" >
+        <button type= "button" class="navButton new" onclick="window.game.newGame();"></button>
+        <button type="button" class="navButton pause" onclick="window.game.pause()"></button>
+        <button type="button" class="navButton quit" onclick="window.game.resetGame()"></button>
+      </div>
+      <div class="score">
+        <label id="lives">Lives</label>
+        <li id="livesCounter"></li>
+      </div>
     </div>
 
   </body>
