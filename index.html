@@ -10,15 +10,14 @@
   <body>
 
     <div id="gameBoard">
-      <canvas id="canvas" width="800" height="900"></canvas>
+      <canvas id="canvasEl" width="800" height="900"></canvas>
       <div class="navBar" >
-        <button type= "button" class="navButton new" onclick="window.game.newGame();"></button>
-        <button type="button" class="navButton pause" onclick="window.game.pause()"></button>
-        <button type="button" class="navButton quit" onclick="window.game.resetGame()"></button>
+        <button type= "button" class="navButton new" onclick="window.game.newGame();">New Game</button>
+        <button type="button" class="navButton pause" onclick="window.game.pause()">Pause</button>
       </div>
       <div class="score">
         <label id="lives">Lives</label>
-        <li id="livesCounter"></li>
+        <label id="time">Time</label>
       </div>
     </div>
 
