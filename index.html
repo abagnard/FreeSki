@@ -8,18 +8,18 @@
   </head>
 
   <body>
-
+    <!-- <div class="title">FreeSki</div> -->
     <div id="gameBoard">
-      <canvas id="canvasEl" width="800" height="900"></canvas>
       <div class="navBar" >
-        <button type= "button" class="navButton new" onclick="window.game.newGame();">New Game</button>
-        <button type="button" class="navButton pause" onclick="window.game.pause()">Pause</button>
+        <div class="navButton" onclick="window.game.newGame();">New Game</div>
+        <div class="navButton" onclick="window.game.pause()">Pause</div>
       </div>
-      <div class="score">
+      <div class="stats">
         <div>Lives: <label id="lives"></label></div>
         <label id="time">Time</label>
       </div>
     </div>
+    <canvas id="canvasEl" width="800" height="900"></canvas>
 
   </body>
 </html>
