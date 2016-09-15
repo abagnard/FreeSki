@@ -7,8 +7,82 @@
     <script type="application/javascript" src="lib/bundle.js"></script>
   </head>
 
+  <script>
+    window.closeInfoModal = function(){
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "none";
+      let modal = document.querySelector(".modal");
+      modal.style.display = "none";
+      window.game.newGame();
+    }
+    window.gameOverModalClose = function(){
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "none";
+      let modal = document.querySelector(".gameOver");
+      modal.style.display = "none";
+    }
+    window.winnerModalClose = function(){
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "none";
+      let winModal = document.querySelector(".winModal");
+      winModal.style.display = "none";
+    }
+    window.loserPlayAgain = function(){
+      window.gameOverModalClose();
+      window.game.newGame();
+    }
+    window.winnerPlayAgain = function(){
+      window.winnerModalClose();
+      window.game.newGame();
+    }
+    window.startPlayAgain = function(){
+      window.closeInfoModal();
+      window.game.newGame();
+    }
+    window.showPause = function(){
+      if (window.game.playing !== false) {
+        window.game.pause();
+      }
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "block";
+      let pauseModal = document.querySelector(".pauseModal");
+      pauseModal.style.display = "block";
+    }
+    window.showReset= function(){
+      if (window.game.playing !== false) {
+        window.game.pause();
+      }
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "block";
+      let resetModal = document.querySelector(".resetModal");
+      resetModal.style.display = "block"
+    }
+    window.closePause = function(){
+      if (window.game.skier.direction !== "fallen") {
+        window.game.pause();
+      }
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "none";
+      let pauseModal = document.querySelector(".pauseModal");
+      pauseModal.style.display = "none";
+    }
+    window.closeReset = function(){
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "none";
+      let resetModal = document.querySelector(".resetModal");
+      resetModal.style.display = "none";
+      window.game.newGame();
+    }
+    window.closeResetPlay = function(){
+      let overlay = document.querySelector(".overlay");
+      overlay.style.display = "none";
+      let resetModal = document.querySelector(".resetModal");
+      resetModal.style.display = "none";
+      window.game.pause();
+    }
+  </script>
+
   <body>
-    <!-- <div class="title">FreeSki</div> -->
 
     <div class="canvasBox">
       <div class="statsBox">
@@ -17,13 +91,47 @@
           <div>Lives: <label id="lives"></label></div>
         </div>
         <div class="navBar" >
-          <div class="navButton" onclick="window.game.newGame();">New Game</div>
-          <div class="navButton" onclick="window.game.pause()">Pause</div>
+          <div class="navButton" onclick="window.showReset()">New Game</div>
+          <div class="navButton" onclick="window.showPause()">Pause</div>
         </div>
       </div>
       <canvas id="canvasEl" width="800" height="900"></canvas>
     </div>
 
+    <div class="overlay">
+       <div class="modal">
+         <button type="button" onclick="window.startPlayAgain()" class="modalClose">x</button>
+         <div>
+           <h2>FreeSki</h2>
+           <p>Manuver the skier down the slope, but try</p>
+           <p>not to hit any trees or rocks!</p>
+           <p>Use the arrow keys to navigate!</p>
+         </div>
+         <button type= "button" class="playAgain" onclick="window.startPlayAgain()">Play Game!</button>
+       </div>
+       <div class="gameOver">
+         <button type="button" onclick="window.loserPlayAgain()" class="modalClose">x</button>
+         <h2>Game Over!</h2>
+         <button type= "button" class="playAgain" onclick="window.loserPlayAgain()">Play Again!</button>
+       </div>
+       <div class="pauseModal">
+         <button type="button" onclick="window.closePause()" class="modalClose">x</button>
+         <h2>Game Paused!</h2>
+         <button type="button" class="resumePlay" onclick="window.closePause()" id="pause">Resume Play!</button>
+       </div>
+       <div class="resetModal">
+         <button type="button" onclick="window.closeReset()" class="modalClose">x</button>
+         <h2>Are you sure?</h2>
+         <button type="button" class="resumePlay" onclick="window.closeResetPlay()" id="pause">Resume Play!</button>
+         <button type="button" class="resetPlay" onclick="window.closeReset()">New Game!</button>
+       </div>
+       <div class="winModal">
+         <button type="button" onclick="window.winnerPlayAgain()" class="modalClose">x</button>
+         <h2>YOU WON!</h2>
+         <p>Clearly you are an awesome skier!</p>
+         <button type= "button" class="playAgain" onclick="window.winnerPlayAgain()">Play Again!</button>
+       </div>
+     </div>
 
 
   </body>

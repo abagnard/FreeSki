@@ -69,4 +69,142 @@ body {
 }
 
 
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  border: 15px solid black;
+  padding: 100px;
+  background-color: whitesmoke;
+  text-align: center;
+  z-index: 11;
+  /*line-height: 1.5;*/
+  font-size: 24px;
+}
+
+.modal h2 {
+  padding-bottom: 15px;
+  font-size: 48px;
+}
+
+.modalClose{
+  border: none;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  font-family: inherit;
+  color: #727272;
+  margin-left: 380px;
+  margin-top: -50px;
+  cursor: pointer;
+  margin-right: -50px;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
+
+
+.pauseModal{
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 29%;
+  border: 15px solid black;
+  padding: 70px;
+  background-color: whitesmoke;
+  z-index: 11;
+  font-size: 31px;
+}
+
+.resetModal{
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 28%;
+  left: 25%;
+  border: 15px solid black;
+  padding: 100px;
+  background-color: whitesmoke;
+  z-index: 11;
+  /* line-height: 1.5; */
+  font-size: 18px;
+}
+
+.winModal{
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  border: 15px solid black;
+  padding: 100px;
+  background-color: whitesmoke;
+  z-index: 11;
+  text-align: center;
+  font-size: 18px;
+}
+
+.gameOver{
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  border: 15px solid black;
+  padding: 100px;
+  background-color: whitesmoke;
+  z-index: 11;
+  text-align: center;
+  font-size: 18px;
+}
+
+
 .statsBox {display: inline-block;float: right;position: relative;height: inherit;}
+
+
+.overlay button {
+    font-size: 22px;
+    border: 4px solid black;
+    background-color: lightgray;
+    /* width: 170px; */
+    border-style: double;
+    text-align: center;
+    padding: 4px 10px;
+}
+
+.overlay h2 {
+    margin: 20px;
+    margin-top: 0px;
+    font-size: 52px;
+    background: whitesmoke;
+}
+
+
+.overlay button:hover {
+    background-color: dimgray;
+    font-weight: bold;
+}
+
+
+button.modalClose {
+    width: 28px;
+    height: 28px;
+    float: right;
+    color: black;
+    padding: 0px 5px;
+}
+
+.overlay p {
+    font-size: 22px;
+    line-height: 5px;
+}
+
+
+button.playAgain {
+    margin-top: 20px;
+}
