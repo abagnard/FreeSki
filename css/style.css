@@ -1,7 +1,6 @@
 body {
-  text-align: center;
   background-color: dimgray;
-  font-family: sans-serif;;
+  font-family: sans-serif;
 }
 
 #canvasEl {
@@ -10,6 +9,8 @@ body {
   margin: 0 auto;
   background: whitesmoke;
   border: 2px solid black;
+  z-index: -1;
+  position: absolute;
 }
 
 #gameBoard {
@@ -25,22 +26,28 @@ body {
 .navButton {
   border: 4px solid black;
   background-color: lightgray;
+  width: 167px;
   border-style: double;
   text-align: center;
   padding: 2px;
-  margin: 5px;
+  margin-bottom: 10px;
 }
 
 .stats{
   background-color: white;
-  margin: 15px 5px 25px 5px;
-  padding: 2px;
+  width: 150;
+  margin: 15px 14px -60px 0px;
+  padding: 10px;
   border: 4px solid black;
+  float: right;
+  font-weight: bold;
+  z-index: 1;
+  display: block;
+  /* position: absolute; */
 }
 
 
-.navBar {
-}
+.navBar {float: left;position: absolute;margin: 85px 15px 0px 0px;display: block;}
 
 
 #gameBoard div {
@@ -49,6 +56,17 @@ body {
 
 
 .navButton:hover {
-    background-color: pink;
+    background-color: dimgray;
     font-weight: bold;
 }
+
+
+.canvasBox {
+    width: 800px;
+    height: 900px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.statsBox {display: inline-block;float: right;position: relative;height: inherit;}
