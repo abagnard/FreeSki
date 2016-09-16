@@ -83,6 +83,11 @@
   </script>
 
   <body>
+    <div class="heading">
+      <h1>FreeSki</h1>
+      <a href="https://github.com/abagnard/SkiFree">GitHub</a>
+    </div>
+
 
     <div class="canvasBox">
       <div class="statsBox">
@@ -98,40 +103,38 @@
       <canvas id="canvasEl" width="800" height="900"></canvas>
     </div>
 
-    <div class="overlay">
-       <div class="modal">
-         <button type="button" onclick="window.startPlayAgain()" class="modalClose">x</button>
-         <div>
-           <h2>FreeSki</h2>
-           <p>Manuver the skier down the slope, but try</p>
-           <p>not to hit any trees or rocks!</p>
-           <p>Use the arrow keys to navigate!</p>
-         </div>
-         <button type= "button" class="playAgain" onclick="window.startPlayAgain()">Play Game!</button>
-       </div>
-       <div class="gameOver">
-         <button type="button" onclick="window.loserPlayAgain()" class="modalClose">x</button>
-         <h2>Game Over!</h2>
-         <button type= "button" class="playAgain" onclick="window.loserPlayAgain()">Play Again!</button>
-       </div>
-       <div class="pauseModal">
-         <button type="button" onclick="window.closePause()" class="modalClose">x</button>
-         <h2>Game Paused!</h2>
-         <button type="button" class="resumePlay" onclick="window.closePause()" id="pause">Resume Play!</button>
-       </div>
-       <div class="resetModal">
-         <button type="button" onclick="window.closeReset()" class="modalClose">x</button>
-         <h2>Are you sure?</h2>
-         <button type="button" class="resumePlay" onclick="window.closeResetPlay()" id="pause">Resume Play!</button>
-         <button type="button" class="resetPlay" onclick="window.closeReset()">New Game!</button>
-       </div>
-       <div class="winModal">
-         <button type="button" onclick="window.winnerPlayAgain()" class="modalClose">x</button>
-         <h2>YOU WON!</h2>
-         <p>Clearly you are an awesome skier!</p>
-         <button type= "button" class="playAgain" onclick="window.winnerPlayAgain()">Play Again!</button>
-       </div>
+    <div class="overlay"></div>
+   <div class="modal allModals">
+     <button type="button" onclick="window.startPlayAgain()" class="modalClose">x</button>
+     <div>
+       <h2>FreeSki</h2>
+       <p>Manuver the skier down the slope, but try not to hit any trees or rocks!</p>
+       <p>Use the arrow keys to navigate!</p>
      </div>
+     <button type= "button" class="playAgain" onclick="window.startPlayAgain()">Play Game!</button>
+   </div>
+   <div class="gameOver allModals">
+     <button type="button" onclick="window.loserPlayAgain()" class="modalClose">x</button>
+     <h2>Game Over</h2>
+     <button type= "button" class="playAgain" onclick="window.loserPlayAgain()">Play Again!</button>
+   </div>
+   <div class="pauseModal allModals">
+     <button type="button" onclick="window.closePause()" class="modalClose">x</button>
+     <h2>Game Paused</h2>
+     <button type="button" class="resumePlay" onclick="window.closePause()" id="pause">Resume Play!</button>
+   </div>
+   <div class="resetModal allModals">
+     <button type="button" onclick="window.closeReset()" class="modalClose">x</button>
+     <h2>Start Over?</h2>
+     <button type="button" class="resumePlay" onclick="window.closeResetPlay()" id="pause">Resume Play!</button>
+     <button type="button" class="resetPlay" onclick="window.closeReset()">New Game!</button>
+   </div>
+   <div class="winModal allModals">
+     <button type="button" onclick="window.winnerPlayAgain()" class="modalClose">x</button>
+     <h2>#WINNING</h2>
+     <button type= "button" class="playAgain" onclick="window.winnerPlayAgain()">Play Again!</button>
+   </div>
+
 
 
   </body>

@@ -1,6 +1,7 @@
 body {
   background-color: dimgray;
   font-family: sans-serif;
+  position: relative;
 }
 
 #canvasEl {
@@ -31,6 +32,7 @@ body {
   text-align: center;
   padding: 2px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .stats{
@@ -70,16 +72,17 @@ body {
 
 
 .modal {
+  /*display: none;*/
   position: absolute;
-  top: 20%;
-  left: 30%;
   border: 15px solid black;
   padding: 100px;
   background-color: whitesmoke;
-  text-align: center;
   z-index: 11;
-  /*line-height: 1.5;*/
-  font-size: 24px;
+  text-align: center;
+  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .modal h2 {
@@ -114,70 +117,76 @@ body {
   display: none;
   position: absolute;
   text-align: center;
-  top: 30%;
-  left: 29%;
+  width: 390px;
+  top: 50%;
+  left: 50%;
   border: 15px solid black;
-  padding: 70px;
+  padding: 100px;
   background-color: whitesmoke;
   z-index: 11;
   font-size: 31px;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .resetModal{
   display: none;
   position: absolute;
   text-align: center;
-  top: 28%;
-  left: 25%;
+  width: 390;
+  top: 50%;
+  left: 50%;
   border: 15px solid black;
   padding: 100px;
   background-color: whitesmoke;
   z-index: 11;
-  /* line-height: 1.5; */
-  font-size: 18px;
+  font-size: 31px;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .winModal{
   display: none;
   position: absolute;
-  top: 20%;
-  left: 20%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
   border: 15px solid black;
   padding: 100px;
   background-color: whitesmoke;
   z-index: 11;
-  text-align: center;
-  font-size: 18px;
+  font-size: 31px;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .gameOver{
   display: none;
   position: absolute;
-  top: 20%;
-  left: 30%;
   border: 15px solid black;
   padding: 100px;
   background-color: whitesmoke;
   z-index: 11;
   text-align: center;
   font-size: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 
 .statsBox {display: inline-block;float: right;position: relative;height: inherit;}
 
 
-.overlay button {
+.allModals button {
     font-size: 22px;
     border: 4px solid black;
     background-color: lightgray;
-    /* width: 170px; */
+    width: 180px;
     border-style: double;
     text-align: center;
+    cursor: pointer;
     padding: 4px 10px;
 }
 
-.overlay h2 {
+.allModals h2 {
     margin: 20px;
     margin-top: 0px;
     font-size: 52px;
@@ -185,7 +194,7 @@ body {
 }
 
 
-.overlay button:hover {
+.allModals button:hover {
     background-color: dimgray;
     font-weight: bold;
 }
@@ -194,17 +203,49 @@ body {
 button.modalClose {
     width: 28px;
     height: 28px;
-    float: right;
     color: black;
     padding: 0px 5px;
 }
 
-.overlay p {
+.allModals p {
     font-size: 22px;
-    line-height: 5px;
+    line-height: 23px;
+    margin-bottom: 10px;
 }
 
 
 button.playAgain {
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+
+.allModals div {
+    width: 400;
+}
+
+
+.heading {
+    text-align: center;
+    margin: 75px 0px 50px 0px;
+}
+
+
+.heading h1 {
+    font-size: 100px;
+    color: white;
+    text-shadow: 5px 5px black;
+    margin: 0px;
+}
+
+
+.heading a {
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.heading a:hover {
+    color: blue;
+    text-decoration: underline;
 }
