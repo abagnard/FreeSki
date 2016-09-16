@@ -25,7 +25,7 @@ ___
 This app will consist of a single screen with game board and nav links to pause and restart the game and a link to my GitHub. Trees and rocks will be scattered on the game bored with the skier located in the middle of the screen.
 
 
-![img of live game](images/live_game.tiff)
+![img of live game](images/live_game.png)
 
 Modals appear upon starting a new game, clicking pause button, clicking new game button and when the user wins or loses.
 
