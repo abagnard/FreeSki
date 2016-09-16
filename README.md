@@ -1,7 +1,7 @@
 # FreeSki
 
 #### [Play Live][FreeSki]
-[FreeSki]: https://abagnard.github.io/SkiFree/
+[FreeSki]: https://abagnard.github.io/FreeSki/
 
 
 FreeSki is a rendition of the infamous 1990s computer game SkiFree.  
