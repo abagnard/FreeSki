@@ -1,6 +1,8 @@
 # FreeSki
 
-#### [Play Live](https://abagnard.github.io/SkiFree/)
+#### [Play Live][FreeSki]
+[FreeSki]: https://abagnard.github.io/SkiFree/
+
 
 FreeSki is a rendition of the infamous 1990s computer game SkiFree.  
 It is written JavaScript and HTML 5 Canvas to create unique, interesting animations and provide a smooth user interface.
