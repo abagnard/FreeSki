@@ -1,12 +1,12 @@
 body {
   background-color: dimgray;
   font-family: sans-serif;
-  position: relative;
+  /* position: relative; */
 }
 
 #canvasEl {
-  width: 800px;
-  height: 900px;
+  width: 500px;
+  height: 590px;
   margin: 0 auto;
   background: whitesmoke;
   border: 2px solid black;
@@ -27,19 +27,19 @@ body {
 .navButton {
   border: 4px solid black;
   background-color: lightgray;
-  width: 167px;
+  width: 100px;
   border-style: double;
   text-align: center;
   padding: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
 
 .stats{
   background-color: white;
-  width: 150;
+  width: 85px;
   margin: 15px 14px -60px 0px;
-  padding: 10px;
+  padding: 5px 10px;
   border: 4px solid black;
   float: right;
   font-weight: bold;
@@ -49,7 +49,7 @@ body {
 }
 
 
-.navBar {float: left;position: absolute;margin: 85px 15px 0px 0px;display: block;}
+.navBar {float: left;position: absolute;margin: 67px 15px 0px 0px;display: block;}
 
 
 #gameBoard div {
@@ -64,10 +64,11 @@ body {
 
 
 .canvasBox {
-    width: 800px;
-    height: 900px;
+    width: 500px;
+    height: 590px;
     margin: 0 auto;
     display: block;
+    /* position: absolute; */
 }
 
 
@@ -124,7 +125,7 @@ body {
   padding: 100px;
   background-color: whitesmoke;
   z-index: 11;
-  font-size: 31px;
+  font-size: 30px;
   transform: translate3d(-50%, -50%, 0);
 }
 
@@ -172,7 +173,7 @@ body {
 }
 
 
-.statsBox {display: inline-block;float: right;position: relative;height: inherit;}
+.statsBox {display: inline-block;float: right;position: relative;height: inherit;font-size: 12px;}
 
 
 .allModals button {
@@ -201,9 +202,10 @@ body {
 
 
 button.modalClose {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     color: black;
+    font-size: 16px;
     padding: 0px 5px;
 }
 
@@ -226,20 +228,20 @@ button.playAgain {
 
 .heading {
     text-align: center;
-    margin: 75px 0px 50px 0px;
+    margin: 15px 0px 10px 0px;
 }
 
 
 .heading h1 {
-    font-size: 100px;
+    font-size: 60px;
     color: white;
     text-shadow: 5px 5px black;
-    margin: 0px;
+    margin: 15px 0px -5px 0px;
 }
 
 
 .heading a {
-    font-size: 22px;
+    font-size: 20px;
     color: black;
     text-decoration: none;
     font-weight: bold;
